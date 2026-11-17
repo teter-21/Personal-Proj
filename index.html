@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/bbfe7651c5.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Personal</h1>
+    <nav class="pc-nav">
+      <ul>
+        <li><a href="#myHome">Home</a></li>
+        <li><a href="#myAbout">About</a></li>
+        <li><a href="#myProj">Projects</a></li>
+        <li><a href="#myEduc">Education</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="pc-cv" onclick="cvClick()">More Info</button>
+
+    <label for="mobile-btn" class="mobile"><i class="fa-solid fa-bars"></i></label>
+    <input type="checkbox" id="mobile-btn" class="mobile" />
+
+    <div class="mobile-nav">
+      <nav class="cp-nav">
+        <ul>
+          <li><a href="#myHome">Home</a></li>
+          <li><a href="#myAbout">About</a></li>
+          <li><a href="#myProj">Projects</a></li>
+          <li><a href="#myEduc">Education</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="cp-cv" onclick="cvClick()">More Info</button>
+    </div>
+  </header>
+
+  <main>
+    <!--HOME SECTION-->
+    <section class="home" id="myHome">
+      <div class="home-intro">
+        <div class="intro-cont">
+          <div class="hi">Hi<span id="wave">👋</span>,</div> <br>
+          <div class="hi-name">I'm Lester,</div><br>
+          <div class="hi-dev"><span style="color:rgb(128, 0, 128);">Front-End</span> Developer</div><br>
+
+          <div class="info-text">
+            <p>I've always wanted to be a front-end developer, and I work really hard to develop interfaces that are
+              responsive and easily user-friendly. Hot on the heels of HTML, CSS and JavaScript, I also strongly believe
+              in upholding the values of modern frameworks, problem-solving, and continuous learning for producing vivid
+              experiences online.</p>
+          </div>
+
+          <div class="intro-btn">
+            <button type="button" onclick="hireClick()">Hire Me</button>
+            <div class="intro-bg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <div class="img-cont" id="img-cont">
+          <!--BOX IMAGE 1-->
+          <div class="box1" id="box1">
+            <img src="./Images/gray-teter-removebg-preview.png" style="width: 100%; height: 100%;" />
+          </div>
+
+          <!--BOX IMAGE 2-->
+          <div class="box2" id="box2">
+            <img src="./Images/violet-teter-removebg-preview.png" style="width: 100%; height: 100%;" />
+          </div>
+
+          <!--SOCIAL LINKS-->
+          <div class="social-links">
+            <a href="https://www.facebook.com/teter.11001/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.gmail.com" target="_blank"><i class="fa-solid fa-at"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--ABOUT-->
+    <section id="myAbout" class="about">
+      <div class="about-img">
+        <div class="img">
+          <img src="./Images/about_lester.png" alt="Profile" style="width: 100%; height: 100%;" />
+        </div>
+        <div class="img-text">
+          <p><span>Name:</span> Lester Lerios</p>
+          <p><span>Age:</span> 22</p>
+          <p><span>Height:</span> 5'5</p>
+          <p><span>"</span>Learning Basics is essential in programming<span>"</span></p>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <div class="text">
+          <p id="text-info">Lester P. Lerios, born on October 25, 2003, passionate about coding, basketball, and
+            sometimes cooking. I enjoy reading and expanding my knowledge. Aspiring full-stack developer, I explore
+            front-end and back-end technologies to build efficient applications. Problem-solving drives me to refine my
+            skills as I embrace challenges and master new tools. Excited about the future, I aim to create impactful
+            digital experiences.
+          </p>
+
+          <div class="address" id="adrs">
+            <div class="google-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d917.5682204456767!2d120.98953898659258!3d14.580366167350947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1698392577600!5m2!1sen!2sph"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="map-info">
+              <p>Address: 1341 C. Romualdez St. Paco Manila</p>
+              <p>Country: Philippines</p>
+              <p>Postal Code: 1007</p>
+              <div id="right-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="myProj" class="project">
+      <div class="proj-banner">
+        <p class="proj-header">PROJECTS</p>
+      </div>
+
+      <div class="proj-folder">
+        <div class="folder">
+          <p class="folder-title">Recipe Finder <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
+                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
+                style="color: #fd085d;"></i></span></p>
+          <img src="./Images/recipefinder.png" alt="Recipe Finder" style="width: 100%; height: 100%;" />
+          <div class="hover-link"><a>
+              <p>Recipe Finder<br>ReactJS<br></p>
+            </a></div>
+        </div>
+
+        <div class="folder">
+          <p class="folder-title">Globo News <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
+                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
+                style="color: #fd085d;"></i></span></p>
+          <img src="./Images/globonews.png" alt="Globo News" style="width: 100%; height: 100%;" />
+          <div class="hover-link"><a>
+              <p>Globo News<br>ReactJS<br></p>
+            </a></div>
+        </div>
+
+        <div class="folder">
+          <p class="folder-title">Bussin <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
+                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
+                style="color: #fd085d;"></i></span></p>
+          <img src="./Images/bussin.png" alt="Bussin" style="width: 100%; height: 100%;" />
+          <div class="hover-link"><a>
+              <p>Bussin<br>HTML, CSS & JAVASCRIPT<br>Jquery & XML</p>
+            </a></div>
+        </div>
+
+        <div class="folder">
+          <p class="folder-title">Weather App <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
+                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
+                style="color: #fd085d;"></i></span></p>
+          <img src="./Images/weatherapp.png" alt="Weather App" style="width: 100%; height: 100%;" />
+          <div class="hover-link"><a>
+              <p>Weather App<br>HTML, CSS & JAVASCRIPT<br>API FETCH</p>
+            </a></div>
+        </div>
+
+        <div class="folder">
+          <p class="folder-title">Bugtong Game <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
+                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
+                style="color: #fd085d;"></i></span></p>
+          <img src="./Images/bugtonggame.png" alt="Bugtong Game" style="width: 100%; height: 100%;" />
+          <div class="hover-link"><a>
+              <p>Bugtong Game<br>ReactJS<br>JSON</p>
+            </a></div>
+        </div>
+
+        <div class="folder">
+          <p class="folder-title">To-Do List <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
+                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
+                style="color: #fd085d;"></i></span></p>
+          <img src="./Images/todolist.png" alt="ToDOList" style="width: 100%; height: 100%;" />
+          <div class="hover-link"><a>
+              <p>To-Do List<br>HTML, CSS & JAVASCRIPT<br>Jquery</p>
+            </a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="myEduc" class="educ">
+
+      <div class="educ-banner">
+        <p class="educ-header">EDUCATION</p>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!--SLIDE 1-->
+          <div class="swiper-slide slide1">
+            <div class="swiper-content">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="./Images/JLES.png" alt="JLES" class="card-img" />
+                </div>
+
+              </div>
+
+              <div class="card-content">
+                <p class="school-header">Justo Lukban Elementary School</p>
+                <p class="school-yr">2009-2016</p>
+
+                <p class="achieve">Achievements</p>
+                <p class="ach">
+                  <li>Consistent Honor Student</li>
+                </p>
+                <p class="ach">
+                  <li>Most Behaved in Class</li>
+                </p>
+                <p class="ach">
+                  <li>Top 10 in Math Class G6</li>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--SLIDE 2-->
+          <div class="swiper-slide slide2">
+            <div class="swiper-content">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="./Images/AHS.png" alt="AHS" class="card-img" />
+                </div>
+
+              </div>
+
+              <div class="card-content">
+                <p class="school-header">Araullo High School</p>
+                <p class="school-yr">2016-2020</p>
+
+                <p class="achieve">Achievements</p>
+                <p class="ach">
+                  <li>Consistent Passing Grade</li>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--SLIDE 3-->
+          <div class="swiper-slide slide3">
+            <div class="swiper-content">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="./Images/PCU.png" alt="PCU" class="card-img" />
+                </div>
+
+              </div>
+
+              <div class="card-content">
+                <p class="school-header">Philippine Christian University</p>
+                <p class="school-yr">2020-2022</p>
+
+                <p class="achieve">Achievements</p>
+                <p class="ach">
+                  <li>Consistent With Honor Students</li>
+                </p>
+                <p class="ach">
+                  <li>First Website Created</li>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide slide4">
+            <div class="swiper-content">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="./Images/MSTIP.png" alt="MSTIP" class="card-img" />
+                </div>
+
+              </div>
+
+              <div class="card-content">
+                <p class="school-header">Makati Science Technological Institute of the Philippines</p>
+                <p class="school-yr">Bachelor of Science in Information System</p>
+                <p class="school-yr">2023-Ongoing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next" style="color: rgb(128, 0, 128)"></div>
+        <div class="swiper-button-prev" style="color: rgb(128, 0, 128)"></div>
+        <!--  <div class="swiper-scrollbar"></div> -->
+        <div class="swiper-pagination"></div>
+
+      </div>
+
+    </section>
+
+    <section class="footer">
+      <div class="footer-link">
+        <div class="library">
+          <a href="https://jquery.com/" title="Jquery"><img src="Images/jquery-logo.svg" /></a>
+          <a href="https://swiperjs.com/" title="SwiperJS"><img src="Images/swipper-logo.svg" /></a>
+          <a href="https://fontawesome.com/" title="Font Awesome"><img src="Images/Font-awesome-logo.svg" /></a>
+        </div>
+
+        <div class="footer-info">
+          <li><i class="fa-solid fa-phone"></i> 095084907772</li>
+          <li><i class="fa-solid fa-location-dot"></i> 1341 C. Romualdez St., Paco Manila</li>
+          <li><i class="fa-solid fa-globe"></i> lester.lerios.19@gmail.com</li>
+        </div>
+      </div>
+      <div class="copy">
+        Copyright&copy; 2026 Lester Lerios
+      </div>
+    </section>
+  </main>
+
+  <!------JAVASCRIPT EXTERNAL FILE------>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      centeredSlides: false,
+      slidesPerGroupSkip: 1,
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
+<!--END-->
