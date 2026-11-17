@@ -1,380 +1,535 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4ef" />
+    <meta
+      name="description"
+      content="Lester Lerios — front-end developer building practical web experiences. Explore selected projects, skills, and background."
+    />
+    <meta property="og:title" content="Lester Lerios — Front-end Developer" />
+    <meta
+      property="og:description"
+      content="Selected web projects and a little about the developer behind them."
+    />
+    <title>Lester Lerios — Front-end Developer</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f2b24'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='28' fill='white'%3ELL%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/bbfe7651c5.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-    crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
-</head>
+  <!--MAIN BODY-->
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!--HEADER -->
+    <header class="site-header" id="top">
+      <div class="shell header-inner">
+        <a href="#top" class="wordmark" aria-label="Lester Lerios, back to top"
+          >L<span class="wordmark-dot">.</span>L
+          <span class="wordmark-descriptor">/ Portfolio</span></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#work">Work</a><a href="#about">About</a
+          ><a href="#education">Education</a>
+        </nav>
+        <a class="header-contact" href="mailto:lester.lerios.19@gmail.com"
+          >Let's talk <span aria-hidden="true">↗</span></a
+        >
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
 
-<body>
-
-  <header>
-    <h1>Personal</h1>
-    <nav class="pc-nav">
-      <ul>
-        <li><a href="#myHome">Home</a></li>
-        <li><a href="#myAbout">About</a></li>
-        <li><a href="#myProj">Projects</a></li>
-        <li><a href="#myEduc">Education</a></li>
-      </ul>
-    </nav>
-    <button type="button" class="pc-cv" onclick="cvClick()">More Info</button>
-
-    <label for="mobile-btn" class="mobile"><i class="fa-solid fa-bars"></i></label>
-    <input type="checkbox" id="mobile-btn" class="mobile" />
-
-    <div class="mobile-nav">
-      <nav class="cp-nav">
-        <ul>
-          <li><a href="#myHome">Home</a></li>
-          <li><a href="#myAbout">About</a></li>
-          <li><a href="#myProj">Projects</a></li>
-          <li><a href="#myEduc">Education</a></li>
-        </ul>
+      <!-- Mobile Navigation -->
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <a href="#work">Work</a><a href="#about">About</a
+        ><a href="#education">Education</a
+        ><a href="mailto:lester.lerios.19@gmail.com">Contact ↗</a>
       </nav>
-      <button type="button" class="cp-cv" onclick="cvClick()">More Info</button>
-    </div>
-  </header>
+    </header>
+    <!--END HEADER-->
 
-  <main>
-    <!--HOME SECTION-->
-    <section class="home" id="myHome">
-      <div class="home-intro">
-        <div class="intro-cont">
-          <div class="hi">Hi<span id="wave">👋</span>,</div> <br>
-          <div class="hi-name">I'm Lester,</div><br>
-          <div class="hi-dev"><span style="color:rgb(128, 0, 128);">Front-End</span> Developer</div><br>
-
-          <div class="info-text">
-            <p>I've always wanted to be a front-end developer, and I work really hard to develop interfaces that are
-              responsive and easily user-friendly. Hot on the heels of HTML, CSS and JavaScript, I also strongly believe
-              in upholding the values of modern frameworks, problem-solving, and continuous learning for producing vivid
-              experiences online.</p>
-          </div>
-
-          <div class="intro-btn">
-            <button type="button" onclick="hireClick()">Hire Me</button>
-            <div class="intro-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-img">
-        <div class="img-cont" id="img-cont">
-          <!--BOX IMAGE 1-->
-          <div class="box1" id="box1">
-            <img src="./Images/gray-teter-removebg-preview.png" style="width: 100%; height: 100%;" />
-          </div>
-
-          <!--BOX IMAGE 2-->
-          <div class="box2" id="box2">
-            <img src="./Images/violet-teter-removebg-preview.png" style="width: 100%; height: 100%;" />
-          </div>
-
-          <!--SOCIAL LINKS-->
-          <div class="social-links">
-            <a href="https://www.facebook.com/teter.11001/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.linkedin.com/login" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.gmail.com" target="_blank"><i class="fa-solid fa-at"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--ABOUT-->
-    <section id="myAbout" class="about">
-      <div class="about-img">
-        <div class="img">
-          <img src="./Images/about_lester.png" alt="Profile" style="width: 100%; height: 100%;" />
-        </div>
-        <div class="img-text">
-          <p><span>Name:</span> Lester Lerios</p>
-          <p><span>Age:</span> 22</p>
-          <p><span>Height:</span> 5'5</p>
-          <p><span>"</span>Learning Basics is essential in programming<span>"</span></p>
-        </div>
-      </div>
-
-      <div class="about-text">
-        <div class="text">
-          <p id="text-info">Lester P. Lerios, born on October 25, 2003, passionate about coding, basketball, and
-            sometimes cooking. I enjoy reading and expanding my knowledge. Aspiring full-stack developer, I explore
-            front-end and back-end technologies to build efficient applications. Problem-solving drives me to refine my
-            skills as I embrace challenges and master new tools. Excited about the future, I aim to create impactful
-            digital experiences.
+    <!-- MAIN CONTENT -->
+    <main id="main">
+      <!-- HERO SECTION -->
+      <section class="hero shell" aria-labelledby="hero-title">
+        <!--Hero Main Title-->
+        <div class="hero-main">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> Open to
+            conversations and opportunities
           </p>
-
-          <div class="address" id="adrs">
-            <div class="google-map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d917.5682204456767!2d120.98953898659258!3d14.580366167350947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1698392577600!5m2!1sen!2sph"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div class="map-info">
-              <p>Address: 1341 C. Romualdez St. Paco Manila</p>
-              <p>Country: Philippines</p>
-              <p>Postal Code: 1007</p>
-              <div id="right-btn"></div>
-            </div>
+          <h1 id="hero-title">Growing<br /><em>and Learning.</em></h1>
+          <p class="hero-lead">
+            Hi, I'm <strong>Lester Lerios</strong> a student web developer that
+            still learning and interested in the details that make websites
+            easier, clearer, and more enjoyable to use.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-solid" href="#work"
+              >Explore my work <span aria-hidden="true">↘</span></a
+            >
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="myProj" class="project">
-      <div class="proj-banner">
-        <p class="proj-header">PROJECTS</p>
-      </div>
-
-      <div class="proj-folder">
-        <div class="folder">
-          <p class="folder-title">Recipe Finder <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
-                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
-                style="color: #fd085d;"></i></span></p>
-          <img src="./Images/recipefinder.png" alt="Recipe Finder" style="width: 100%; height: 100%;" />
-          <div class="hover-link"><a>
-              <p>Recipe Finder<br>ReactJS<br></p>
-            </a></div>
-        </div>
-
-        <div class="folder">
-          <p class="folder-title">Globo News <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
-                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
-                style="color: #fd085d;"></i></span></p>
-          <img src="./Images/globonews.png" alt="Globo News" style="width: 100%; height: 100%;" />
-          <div class="hover-link"><a>
-              <p>Globo News<br>ReactJS<br></p>
-            </a></div>
-        </div>
-
-        <div class="folder">
-          <p class="folder-title">Bussin <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
-                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
-                style="color: #fd085d;"></i></span></p>
-          <img src="./Images/bussin.png" alt="Bussin" style="width: 100%; height: 100%;" />
-          <div class="hover-link"><a>
-              <p>Bussin<br>HTML, CSS & JAVASCRIPT<br>Jquery & XML</p>
-            </a></div>
-        </div>
-
-        <div class="folder">
-          <p class="folder-title">Weather App <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
-                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
-                style="color: #fd085d;"></i></span></p>
-          <img src="./Images/weatherapp.png" alt="Weather App" style="width: 100%; height: 100%;" />
-          <div class="hover-link"><a>
-              <p>Weather App<br>HTML, CSS & JAVASCRIPT<br>API FETCH</p>
-            </a></div>
-        </div>
-
-        <div class="folder">
-          <p class="folder-title">Bugtong Game <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
-                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
-                style="color: #fd085d;"></i></span></p>
-          <img src="./Images/bugtonggame.png" alt="Bugtong Game" style="width: 100%; height: 100%;" />
-          <div class="hover-link"><a>
-              <p>Bugtong Game<br>ReactJS<br>JSON</p>
-            </a></div>
-        </div>
-
-        <div class="folder">
-          <p class="folder-title">To-Do List <span><i class="fa-solid fa-circle" style="color: #e1ff00;"></i><i
-                class="fa-solid fa-circle" style="color: #0006b3;"></i><i class="fa-solid fa-circle"
-                style="color: #fd085d;"></i></span></p>
-          <img src="./Images/todolist.png" alt="ToDOList" style="width: 100%; height: 100%;" />
-          <div class="hover-link"><a>
-              <p>To-Do List<br>HTML, CSS & JAVASCRIPT<br>Jquery</p>
-            </a></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="myEduc" class="educ">
-
-      <div class="educ-banner">
-        <p class="educ-header">EDUCATION</p>
-      </div>
-
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <!--SLIDE 1-->
-          <div class="swiper-slide slide1">
-            <div class="swiper-content">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="./Images/JLES.png" alt="JLES" class="card-img" />
-                </div>
-
-              </div>
-
-              <div class="card-content">
-                <p class="school-header">Justo Lukban Elementary School</p>
-                <p class="school-yr">2009-2016</p>
-
-                <p class="achieve">Achievements</p>
-                <p class="ach">
-                  <li>Consistent Honor Student</li>
-                </p>
-                <p class="ach">
-                  <li>Most Behaved in Class</li>
-                </p>
-                <p class="ach">
-                  <li>Top 10 in Math Class G6</li>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!--SLIDE 2-->
-          <div class="swiper-slide slide2">
-            <div class="swiper-content">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="./Images/AHS.png" alt="AHS" class="card-img" />
-                </div>
-
-              </div>
-
-              <div class="card-content">
-                <p class="school-header">Araullo High School</p>
-                <p class="school-yr">2016-2020</p>
-
-                <p class="achieve">Achievements</p>
-                <p class="ach">
-                  <li>Consistent Passing Grade</li>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!--SLIDE 3-->
-          <div class="swiper-slide slide3">
-            <div class="swiper-content">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="./Images/PCU.png" alt="PCU" class="card-img" />
-                </div>
-
-              </div>
-
-              <div class="card-content">
-                <p class="school-header">Philippine Christian University</p>
-                <p class="school-yr">2020-2022</p>
-
-                <p class="achieve">Achievements</p>
-                <p class="ach">
-                  <li>Consistent With Honor Students</li>
-                </p>
-                <p class="ach">
-                  <li>First Website Created</li>
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="swiper-slide slide4">
-            <div class="swiper-content">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="./Images/MSTIP.png" alt="MSTIP" class="card-img" />
-                </div>
-
-              </div>
-
-              <div class="card-content">
-                <p class="school-header">Makati Science Technological Institute of the Philippines</p>
-                <p class="school-yr">Bachelor of Science in Information System</p>
-                <p class="school-yr">2023-Ongoing</p>
-              </div>
-            </div>
+          <div class="hero-footnote">
+            <span>Based in Paco Manila, Philippines</span
+            ><span>HTML / CSS / JavaScript / React</span>
           </div>
         </div>
 
-        <div class="swiper-button-next" style="color: rgb(128, 0, 128)"></div>
-        <div class="swiper-button-prev" style="color: rgb(128, 0, 128)"></div>
-        <!--  <div class="swiper-scrollbar"></div> -->
-        <div class="swiper-pagination"></div>
-
-      </div>
-
-    </section>
-
-    <section class="footer">
-      <div class="footer-link">
-        <div class="library">
-          <a href="https://jquery.com/" title="Jquery"><img src="Images/jquery-logo.svg" /></a>
-          <a href="https://swiperjs.com/" title="SwiperJS"><img src="Images/swipper-logo.svg" /></a>
-          <a href="https://fontawesome.com/" title="Font Awesome"><img src="Images/Font-awesome-logo.svg" /></a>
+        <!--Hero Image Visual-->
+        <div class="hero-visual">
+          <div class="portrait-stage">
+            <span class="portrait-index">LL</span>
+            <img
+              src="Images/gray-teter-removebg-preview.png"
+              alt="Portrait of Lester Lerios"
+              fetchpriority="high"
+              data-fallback="Portrait unavailable"
+            />
+            <span class="portrait-caption"
+              >BUILDING FOR THE WEB<br />AND LEARNING EVERY DAY.</span
+            >
+          </div>
         </div>
+      </section>
+      <!--END HERO SECTION-->
 
-        <div class="footer-info">
-          <li><i class="fa-solid fa-phone"></i> 095084907772</li>
-          <li><i class="fa-solid fa-location-dot"></i> 1341 C. Romualdez St., Paco Manila</li>
-          <li><i class="fa-solid fa-globe"></i> lester.lerios.19@gmail.com</li>
+      <!--WORK SECTION-->
+      <section
+        class="section work-section"
+        id="work"
+        aria-labelledby="work-heading"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">SELECTED WORK</p>
+              <h2 id="work-heading">
+                Things I've built<span class="accent-period">.</span>
+              </h2>
+            </div>
+            <p class="section-deck">
+              A mix of my practical tools, small experiments, and projects that
+              helped me learn web developing.
+            </p>
+          </div>
+          <!-- Filter Buttons -->
+          <div class="filter-row" role="group" aria-label="Filter projects">
+            <button
+              type="button"
+              class="filter is-active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All projects <span>6</span></button
+            ><button
+              type="button"
+              class="filter"
+              data-filter="react"
+              aria-pressed="false"
+            >
+              React <span>3</span></button
+            ><button
+              type="button"
+              class="filter"
+              data-filter="javascript"
+              aria-pressed="false"
+            >
+              JavaScript <span>3</span>
+            </button>
+          </div>
+          <div class="project-grid" id="project-grid">
+            <!-- Recipe Finder -->
+            <article
+              class="project-card project-feature"
+              data-category="react"
+              data-project="recipe"
+            >
+              <button
+                class="project-open"
+                type="button"
+                aria-label="View details for Recipe Finder"
+              >
+                <span class="project-media"
+                  ><img
+                    src="Images/recipefinder.png"
+                    alt="Screenshot of Recipe Finder"
+                    loading="lazy"
+                    data-fallback="Screenshot unavailable"
+                  /><span class="image-action" aria-hidden="true">↗</span></span
+                ><span class="project-meta"
+                  ><span class="project-number">1. REACT</span
+                  ><span class="project-year">Web application</span></span
+                ><span class="project-title">Recipe Finder </span
+                ><span class="project-description"
+                  >Explore recipes through a simple, search-first
+                  interface.</span
+                >
+              </button>
+            </article>
+
+            <!-- Globo News -->
+            <article
+              class="project-card"
+              data-category="react"
+              data-project="globo"
+            >
+              <button
+                class="project-open"
+                type="button"
+                aria-label="View details for Globo News"
+              >
+                <span class="project-media"
+                  ><img
+                    src="Images/globonews.png"
+                    alt="Screenshot of Globo News"
+                    loading="lazy"
+                    data-fallback="Screenshot unavailable"
+                  /><span class="image-action" aria-hidden="true">↗</span></span
+                ><span class="project-meta"
+                  ><span class="project-number">2. REACT</span
+                  ><span class="project-year">News interface</span></span
+                ><span class="project-title">Globo News </span
+                ><span class="project-description"
+                  >A news-browsing interface built with React.</span
+                >
+              </button>
+            </article>
+
+            <!-- Bussin -->
+            <article
+              class="project-card"
+              data-category="javascript"
+              data-project="bussin"
+            >
+              <button
+                class="project-open"
+                type="button"
+                aria-label="View details for Bussin"
+              >
+                <span class="project-media"
+                  ><img
+                    src="Images/bussin.png"
+                    alt="Screenshot of Bussin"
+                    loading="lazy"
+                    data-fallback="Screenshot unavailable"
+                  /><span class="image-action" aria-hidden="true">↗</span></span
+                ><span class="project-meta"
+                  ><span class="project-number">3. JAVASCRIPT</span
+                  ><span class="project-year">Web project</span></span
+                ><span class="project-title">Bussin </span
+                ><span class="project-description"
+                  >A web build using HTML, CSS, JavaScript, jQuery and
+                  XML.</span
+                >
+              </button>
+            </article>
+
+            <!-- Weather App -->
+            <article
+              class="project-card"
+              data-category="javascript"
+              data-project="weather"
+            >
+              <button
+                class="project-open"
+                type="button"
+                aria-label="View details for Weather App"
+              >
+                <span class="project-media"
+                  ><img
+                    src="Images/weatherapp.png"
+                    alt="Screenshot of Weather App"
+                    loading="lazy"
+                    data-fallback="Screenshot unavailable"
+                  /><span class="image-action" aria-hidden="true">↗</span></span
+                ><span class="project-meta"
+                  ><span class="project-number">4. JAVASCRIPT</span
+                  ><span class="project-year">API project</span></span
+                ><span class="project-title">Weather App </span
+                ><span class="project-description"
+                  >A weather interface practicing data fetching and
+                  display.</span
+                >
+              </button>
+            </article>
+
+            <!-- Bugtong Game -->
+            <article
+              class="project-card"
+              data-category="react"
+              data-project="bugtong"
+            >
+              <button
+                class="project-open"
+                type="button"
+                aria-label="View details for Bugtong Game"
+              >
+                <span class="project-media"
+                  ><img
+                    src="Images/bugtonggame.png"
+                    alt="Screenshot of Bugtong Game"
+                    loading="lazy"
+                    data-fallback="Screenshot unavailable"
+                  /><span class="image-action" aria-hidden="true">↗</span></span
+                ><span class="project-meta"
+                  ><span class="project-number">5. REACT</span
+                  ><span class="project-year">Interactive game</span></span
+                ><span class="project-title">Bugtong Game </span
+                ><span class="project-description"
+                  >A Filipino riddle game using React and JSON data.</span
+                >
+              </button>
+            </article>
+
+            <!-- To-Do List -->
+            <article
+              class="project-card"
+              data-category="javascript"
+              data-project="todo"
+            >
+              <button
+                class="project-open"
+                type="button"
+                aria-label="View details for To-Do List"
+              >
+                <span class="project-media"
+                  ><img
+                    src="Images/todolist.png"
+                    alt="Screenshot of To-Do List"
+                    loading="lazy"
+                    data-fallback="Screenshot unavailable"
+                  /><span class="image-action" aria-hidden="true">↗</span></span
+                ><span class="project-meta"
+                  ><span class="project-number">6. JAVASCRIPT</span
+                  ><span class="project-year">Productivity tool</span></span
+                ><span class="project-title">To-Do List </span
+                ><span class="project-description"
+                  >A straightforward task list built with JavaScript and
+                  jQuery.</span
+                >
+              </button>
+            </article>
+          </div>
+          <div class="empty-state" id="empty-state" hidden>
+            <p>No projects found in this category.</p>
+            <button type="button" class="text-link" id="reset-filter">
+              Show all projects ↗
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--END WORK SECTION-->
+
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-heading"
+      >
+        <div class="shell about-grid">
+          <div>
+            <p class="eyebrow">02 / ABOUT ME</p>
+            <h2 id="about-heading">
+              Curious by default.<br /><em>Always improving.</em>
+            </h2>
+            <div class="about-photo">
+              <img
+                src="Images/about_lester.png"
+                alt="Lester Lerios"
+                loading="lazy"
+                data-fallback="Photo unavailable"
+              />
+            </div>
+          </div>
+          <div class="about-copy">
+            <p class="about-large">Learning Basics is Essential in Coding.</p>
+            <p>
+              I'm Lester P. Lerios, an aspiring web developer with a focus on
+              front-end development and little bit of back-end development. I
+              enjoy learning how interfaces work, working through problems, and
+              getting the small details right. I also do PHP and MySQL a little
+              bit, but I mostly focus on front-end development. I am currently
+              studying Information Systems at Makati Science Technological
+              Institute of the Philippines.
+            </p>
+            <p>
+              Outside programming, I enjoy basketball, cooking from time to
+              time, and reading. Each project is an opportunity to practice what
+              I know and learn what I don't.
+            </p>
+            <div class="skills">
+              <h3>Tools I've worked with</h3>
+              <ul>
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>jQuery</li>
+                <li>JSON &amp; APIs</li>
+                <li>Git &amp; GitHub</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section education-section"
+        id="education"
+        aria-labelledby="education-heading"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">BACKGROUND</p>
+              <h2 id="education-heading">
+                My learning path<span class="accent-period">.</span>
+              </h2>
+            </div>
+            <p class="section-deck">
+              From my first school projects to studying Information Systems.
+            </p>
+          </div>
+          <ol class="education-list">
+            <li>
+              <div class="edu-years">2023 — PRESENT</div>
+              <div class="edu-detail">
+                <h3>
+                  Makati Science Technological Institute of the Philippines
+                </h3>
+                <p>
+                  Bachelor of Science in Information Systems | Rank 3 in Best
+                  Capstone Project
+                </p>
+              </div>
+              <img
+                src="Images/MSTIP.png"
+                alt="MSTIP school logo"
+                loading="lazy"
+                data-fallback="Logo unavailable"
+              />
+            </li>
+            <li>
+              <div class="edu-years">2020 — 2022</div>
+              <div class="edu-detail">
+                <h3>Philippine Christian University</h3>
+                <p>Created my first website | Honor student</p>
+              </div>
+              <img
+                src="Images/PCU.png"
+                alt="Philippine Christian University logo"
+                loading="lazy"
+                data-fallback="Logo unavailable"
+              />
+            </li>
+            <li>
+              <div class="edu-years">2016 — 2020</div>
+              <div class="edu-detail">
+                <h3>Araullo High School</h3>
+                <p>Secondary education</p>
+              </div>
+              <img
+                src="Images/AHS.png"
+                alt="Araullo High School logo"
+                loading="lazy"
+                data-fallback="Logo unavailable"
+              />
+            </li>
+            <li>
+              <div class="edu-years">2009 — 2016</div>
+              <div class="edu-detail">
+                <h3>Justo Lukban Elementary School</h3>
+                <p>Honor student | Top 10 in Grade 6 Mathematics</p>
+              </div>
+              <img
+                src="Images/JLES.png"
+                alt="Justo Lukban Elementary School logo"
+                loading="lazy"
+                data-fallback="Logo unavailable"
+              />
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="shell contact-inner">
+          <div>
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Have something<br /><em>in mind?</em></h2>
+            <p>
+              I'm always interested in discussing web projects, collaborations,
+              and opportunities to grow.
+            </p>
+          </div>
+          <a class="contact-email" href="mailto:lester.lerios.19@gmail.com"
+            >Send me an email <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>© <span id="year">2026</span> Lester Lerios</span
+        ><span>Designed and built with care.</span
+        ><a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+    <dialog
+      class="project-dialog"
+      id="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-top">
+        <span class="eyebrow">PROJECT DETAILS</span
+        ><button
+          type="button"
+          class="dialog-close"
+          id="dialog-close"
+          aria-label="Close project details"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div class="dialog-content">
+        <div class="dialog-image-wrap">
+          <img id="dialog-image" alt="" src="Images/recipefinder.png" />
+        </div>
+        <div class="dialog-body">
+          <p class="eyebrow" id="dialog-kind"></p>
+          <h2 id="dialog-title"></h2>
+          <p id="dialog-description"></p>
+          <h3>Built with</h3>
+          <div id="dialog-tags" class="dialog-tags"></div>
+          <p class="dialog-note">
+            <a
+              href="#"
+              id="dialog-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View project ↗</a
+            >
+          </p>
         </div>
       </div>
-      <div class="copy">
-        Copyright&copy; 2026 Lester Lerios
-      </div>
-    </section>
-  </main>
-
-  <!------JAVASCRIPT EXTERNAL FILE------>
-  <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      centeredSlides: false,
-      slidesPerGroupSkip: 1,
-      grabCursor: true,
-      keyboard: {
-        enabled: true,
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-        },
-      },
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
-</body>
-
+    </dialog>
+  </body>
 </html>
-<!--END-->
