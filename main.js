@@ -8,6 +8,7 @@ const projects = Object.freeze({
     description:
       "A recipe discovery interface i built using React. The project explores food ingredients and cooking methods. My Inspiration for crreating this project came from my love for cooking and exploring new recipes.",
     tags: ["React", "JavaScript"],
+    link: "https://recipe-finder.lester-lerios-19.workers.dev/",
   },
   globo: {
     title: "Globo News",
@@ -16,6 +17,7 @@ const projects = Object.freeze({
     description:
       "A React-based news interface exploring countries stories and headlines. I built this project to practice creating dynamic news feeds and take inspiration to the design of Rappler news page.",
     tags: ["React", "JavaScript"],
+    link: "https://globo-news.vercel.app/",
   },
   bussin: {
     title: "Bussin",
@@ -24,6 +26,7 @@ const projects = Object.freeze({
     description:
       "A web project built using HTML, CSS and JavaScript, i try making a video background homepage here.",
     tags: ["HTML", "CSS", "JavaScript"],
+    link: "https://landing-page-weld-eight-41.vercel.app/",
   },
   weather: {
     title: "Weather App",
@@ -32,6 +35,7 @@ const projects = Object.freeze({
     description:
       "A weather application focused on fetching remote data with JavaScript and translating it into a useful interface.",
     tags: ["HTML", "CSS", "JavaScript", "Fetch API"],
+    link: "https://weather-page-d5n9.onrender.com/",
   },
   bugtong: {
     title: "Bugtong Game",
@@ -40,6 +44,7 @@ const projects = Object.freeze({
     description:
       "An interactive Filipino riddle game built with React, using JSON to structure its game content. As a kid i used to play this game with my friends and i wanted to create a digital version of it.",
     tags: ["React", "JavaScript", "JSON"],
+    link: "https://bugtong-reactjs.onrender.com",
   },
   todo: {
     title: "To-Do List",
@@ -48,6 +53,7 @@ const projects = Object.freeze({
     description:
       "A compact task-management project that practices interactive behavior using JavaScript and jQuery.",
     tags: ["HTML", "CSS", "JavaScript", "jQuery"],
+    link: "https://to-do-list-black-eight-75.vercel.app",
   },
 });
 
@@ -115,7 +121,7 @@ document.querySelectorAll("[data-project] .project-open").forEach((button) => {
       project.description;
     dialogImage.src = project.image;
     dialogImage.alt = `Screenshot of ${project.title}`;
-    dialogLink.href = `${project.image}`;
+    dialogLink.href = `${project.link}`;
     dialogLink.textContent = `View ${project.title} ↗`;
     dialogLink.setAttribute("aria-label", `View ${project.title} in a new tab`);
     const tags = document.querySelector("#dialog-tags");
